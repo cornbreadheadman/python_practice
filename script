@@ -5,6 +5,8 @@
 
 # Import various librarys
 #import CHIP_IO.GPIO as GPIO
+#import CHIP_IO.PWM as PWM
+#import CHIP_IO.SOFTPWM as SOFTPWM
 import time
 import random
 import pyperclip
@@ -57,6 +59,14 @@ number = lotto(100, 999)
 print('Your lucky number is', number)
 if number == 420:
     print('Wow! Thats a great number.')
+time.sleep( 1 )
+
+# Print the clipboard
+clipboard = cb()
+print('The following stuff is in your clipboard:')
+print('<------------Begining-------------->')
+print(clipboard)
+print('<-------------Ending--------------->')
 
 time.sleep( 2 )
 
