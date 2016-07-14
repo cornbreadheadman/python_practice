@@ -8,11 +8,13 @@
 #import CHIP_IO.PWM as PWM
 #import CHIP_IO.SOFTPWM as SOFTPWM
 import time
+import datetime
 import random
 import pyperclip
 
 # Global Variables
 author = 'Cornbread'
+now = datetime.datetime.now()
 
 # Defines
 def cb():
@@ -28,25 +30,8 @@ print('Hello Cruel World!')
 time.sleep( 1 )
 
 # Gather the current time
-time_now = time.localtime()
-hour = time_now.tm_hour
-minute = time_now.tm_min
+print('The current date and time is', now.strftime("%B %d, %Y %I:%M %p"))
 
-if hour > 12:
-    hour = hour - 12
-    shift = 'PM'
-elif hour < 13:
-    shift = 'AM'
-
-if minute < 10:
-    tens = 0
-elif minute > 9:
-    tens = ''
-
-print('The current time is', end=" ")
-print(hour, end="")
-print(':', tens, minute, sep="", end=" ")
-print(shift)
 time.sleep( 1 )
 
 # Gather name
